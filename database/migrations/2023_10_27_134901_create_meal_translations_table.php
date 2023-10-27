@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('descriptionTranslation', 100);
             $table->timestamps();
 
-            $table->foreign('id_meal')->references('id')->on('meal');
+            $table->foreign('id_meal')->references('id')->on('meals');
             $table->foreign('id_language')->references('id')->on('languages');
         });
     }

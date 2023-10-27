@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('nameTranslation', 100);
             $table->timestamps();
 
-            $table->foreign('id_ingredient')->references('id')->on('ingredient');
-            $table->foreign('id_language')->references('id')->on('language');
+            $table->foreign('id_ingredient')->references('id')->on('ingredients');
+            $table->foreign('id_language')->references('id')->on('languages');
         });
     }
 

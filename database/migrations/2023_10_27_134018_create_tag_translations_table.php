@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('tagTranslation', 100);
             $table->timestamps();
 
-            $table->foreign('id_tag')->references('id')->on('tag');
+            $table->foreign('id_tag')->references('id')->on('tags');
             $table->foreign('id_language')->references('id')->on('languages');
         });
     }

@@ -13,7 +13,7 @@ class Meal extends Model
         return $this->belongsTo(Language::class, "id_language");
     }
 
-    public function category(){
-        return $this->belongsTo(Category::class,"id_category");
+    public function categories(){
+        return $this->belongsToMany(Category::class, 'meal_category', 'id_meal', 'id_category');
     }
 }
